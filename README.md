@@ -6,6 +6,9 @@
 
 * [Newer version of PHP](#newer-version-of-php)
 * [Create a new host](#create-a-new-host)
+* [Disable MariaDB](#disable-mariadb)
+* [Troubleshootings](#troubleshootings)
+  * [Incorrect port for MySQL](#incorrect-port-for-mysql)
 
 ## Newer version of PHP
 
@@ -35,3 +38,27 @@ Just go to the `C:\wamp64\alias` folder, duplicate an existing `.conf` file and 
 Change the alias name and the path (make sure to use the Unix syntax).
 
 Restart the Wamp server.
+
+## Disable MariaDB
+
+Right-click on the Wamp icon in the traypanel, select `Wamp settings` then uncheck `Allow MariaDB`.
+
+![](./images/disable_mariadb.png)
+
+Attention: make sure to configure MySQL to use port `3306`. Right-click on the Wamp icon in the traypanel, select `Tools` and update the port if needed.
+
+![](./images/mysql_port_3306.png)
+
+## Troubleshootings
+
+### Incorrect port for MySQL
+
+The error below happens when the MySQL service isn't started or when the php script is using a specific port (probably `3306`) and wamp is configured to use another one (f.i. `3308`).
+
+```bash
+ERROR: SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it
+```
+
+To solve it, right-click on the Wamp icon in the traypanel, select `Tools` and update the port if needed.
+
+![](./images/mysql_port_3306.png)
