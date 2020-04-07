@@ -1,3 +1,5 @@
+![Banner](./images/banner.png)
+
 # Wamp tips
 
 > Some tips &amp; tricks for wamp
