@@ -1,6 +1,6 @@
 # Wamp tips
 
-![Banner](./images/banner.png)
+![Banner](./banner.svg)
 
 > Some tips &amp; tricks for wamp
 
